@@ -1,6 +1,6 @@
 # Six AND Gates Beat Seven
 
-**A counterexample to quadratic-circuit optimality over \(\mathbb F_2\).**
+**A counterexample to quadratic-circuit optimality over $\mathbb F_2$.**
 
 Can allowing higher-degree intermediate computations make a quadratic Boolean function cheaper to compute?
 
@@ -25,9 +25,9 @@ The separation concerns exact multiplicative complexity, not just the cost of tw
 
 ## The counterexample
 
-Write \(x_{ij}=x_i x_j\). All sums are over \(\mathbb F_2\), and the variables are Boolean, so \(x_i^2=x_i\).
+Write $x_{ij}=x_i x_j$. All sums are over $\mathbb F_2$, and the variables are Boolean, so $x_i^2=x_i$.
 
-The homogeneous quadratic map \(Q:\mathbb F_2^6\to\mathbb F_2^5\) is given by
+The homogeneous quadratic map $Q:\mathbb F_2^6\to\mathbb F_2^5$ is given by
 
 $$
 \begin{aligned}
@@ -67,15 +67,15 @@ q_5&=g_4+g_6+g_1+g_2+g_3+x_1+x_2+x_3+x_4.
 \end{aligned}
 $$
 
-There are exactly six binary AND gates, \(g_1,\ldots,g_6\), and no constants are needed.
+There are exactly six binary AND gates, $g_1,\ldots,g_6$, and no constants are needed.
 
 ## Why seven are necessary in a quadratic circuit
 
-Modulo affine functions, a quadratic Boolean form is an element of the 15-dimensional space \(\Lambda^2\mathbb F_2^6\). Each product of two affine linear forms contributes a decomposable bivector (an alternating form of rank at most two).
+Modulo affine functions, a quadratic Boolean form is an element of the 15-dimensional space $\Lambda^2\mathbb F_2^6$. Each product of two affine linear forms contributes a decomposable bivector (an alternating form of rank at most two).
 
-Let \(W\) be the five-dimensional space spanned by the quadratic outputs. A quadratic circuit with at most six AND gates would require a subspace of dimension at most six containing \(W\) and spanned by decomposable bivectors. No such subspace exists.
+Let $W$ be the five-dimensional space spanned by the quadratic outputs. A quadratic circuit with at most six AND gates would require a subspace of dimension at most six containing $W$ and spanned by decomposable bivectors. No such subspace exists.
 
-This can be shown algebraically, or verified exhaustively by examining the \(2^{10}-1=1,023\) six-dimensional superspaces of \(W\).
+This can be shown algebraically, or verified exhaustively by examining the $2^{10}-1=1,023$ six-dimensional superspaces of $W$.
 
 The proof also rules out an unrestricted five-AND circuit and exhibits a quadratic seven-AND circuit. Thus both minima are exact.
 
@@ -94,9 +94,9 @@ The verifier checks both circuits on all 64 inputs, enumerates all 651 nonzero d
 
 ## Scope
 
-Here MC counts binary AND gates in unrestricted XOR–AND circuits, with free affine operations. qMC counts binary AND gates in circuits where all AND inputs are affine forms in the original variables (level-one or \(\Sigma\Pi\Sigma\) circuits). The same minimum is obtained if all intermediate Boolean functions are required to have degree at most two.
+Here MC counts binary AND gates in unrestricted XOR–AND circuits, with free affine operations. qMC counts binary AND gates in circuits where all AND inputs are affine forms in the original variables (level-one or $\Sigma\Pi\Sigma$ circuits). The same minimum is obtained if all intermediate Boolean functions are required to have degree at most two.
 
-The result is about Boolean functions in the quotient ring \(\mathbb F_2[x_1,\ldots,x_6]/(x_i^2-x_i)\), not formal polynomial computation. It does not establish a separation for bilinear maps or an asymptotically growing gap.
+The result is about Boolean functions in the quotient ring $\mathbb F_2[x_1,\ldots,x_6]/(x_i^2-x_i)$, not formal polynomial computation. It does not establish a separation for bilinear maps or an asymptotically growing gap.
 
 To the best of our knowledge, this is a new counterexample to the general question in the references below. This is a research note, not a peer-reviewed publication.
 
