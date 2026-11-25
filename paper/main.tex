@@ -1,0 +1,35 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\DeclareMathOperator{\MC}{MC}
+\DeclareMathOperator{\qMC}{qMC}
+\renewcommand{\mathrm}[1]{\operatorname{#1}}
+\title{Six AND Gates Beat Seven:\\ A Counterexample to Quadratic-Circuit Optimality over $\mathbb F_2$}
+\author{Yuki Obuchi}
+\date{Research note, first published 2026-11-25\\ \small\url{https://github.com/ObuchiYuki/quadratic-mc-gap}}
+\begin{document}
+\maketitle
+\begin{abstract}
+We give an explicit homogeneous quadratic map $Q:\mathbb F_2^6\to\mathbb F_2^5$ whose multiplicative complexity over XOR--AND circuits is $6$, while every quadratic (level-one, $\Sigma\Pi\Sigma$) circuit for $Q$ needs $7$ AND gates: $\MC(Q)=6<7=\qMC(Q)$. The six-gate circuit uses three cubic intermediate functions whose common cubic part cancels in the outputs. Both bounds are exact. The lower bounds are proved by hand via the exterior algebra $\Lambda^2\mathbb F_2^6$ and are confirmed by an exhaustive verifier. To the best of our knowledge, this gives a negative answer to the general question of whether quadratic circuits are optimal for computing families of quadratic Boolean forms, raised by Mirwald and Schnorr and revisited by Boyar and Find; optimality is known for one or two forms. This note has not been peer-reviewed.
+\end{abstract}
+
+\paragraph{The idea.} A circuit need not remain quadratic at every intermediate step just because its final outputs are quadratic. In the example, three cubic intermediate expressions share the same cubic part; taking their XOR differences cancels it, yielding two quadratic outputs while saving an AND gate. The separation concerns exact multiplicative complexity, not just the cost of two particular implementations.
+
+\input{body.tex}
+
+\section*{Verification}
+The repository contains \texttt{verify.py}, a standalone verifier using only the Python standard library (Python~3.10+). It checks both circuits on all 64 inputs, enumerates all 651 nonzero decomposable bivectors and all 1{,}023 six-dimensional superspaces of $W$, and independently excludes five-gate unrestricted circuits. It is run automatically on every push.
+
+\section*{Acknowledgments}
+The example was found, and its proofs and verifier were drafted and checked, with the help of AI assistants (Claude by Anthropic; Gemini by Google for an independent cross-check). The author reviewed the final statements.
+
+\input{refs.tex}
+
+\vfill
+\noindent\small This note is licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0). The accompanying code is MIT-licensed.
+\end{document}

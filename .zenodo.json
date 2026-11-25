@@ -1,0 +1,19 @@
+{
+  "title": "Six AND Gates Beat Seven: A Counterexample to Quadratic-Circuit Optimality over F2",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "description": "<p>An explicit homogeneous quadratic map Q: F<sub>2</sub><sup>6</sup> &rarr; F<sub>2</sub><sup>5</sup> with multiplicative complexity 6 over XOR&ndash;AND circuits, while every quadratic (level-one) circuit for Q needs 7 AND gates. Both bounds are exact, proved by hand and confirmed by an exhaustive verifier (verify.py). To the best of our knowledge, this gives a negative answer to the general question of quadratic-circuit optimality raised by Mirwald and Schnorr (1992) and revisited by Boyar and Find. Research note; not peer-reviewed.</p>",
+  "creators": [
+    {"name": "Obuchi, Yuki"}
+  ],
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "keywords": [
+    "multiplicative complexity",
+    "quadratic Boolean forms",
+    "XOR-AND circuits",
+    "quadratic circuit optimality",
+    "Boolean circuit complexity",
+    "alternating forms"
+  ]
+}

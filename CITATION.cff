@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this result, please cite it as below."
+type: software
+title: "Six AND Gates Beat Seven: A Counterexample to Quadratic-Circuit Optimality over F2"
+abstract: >-
+  An explicit homogeneous quadratic map Q: F2^6 -> F2^5 with multiplicative
+  complexity 6 over XOR-AND circuits, while every quadratic (level-one) circuit
+  for Q needs 7 AND gates. Both bounds are exact, proved by hand and confirmed
+  by an exhaustive verifier. Research note; not peer-reviewed.
+authors:
+  - given-names: Yuki
+    family-names: Obuchi
+version: 1.0.0
+date-released: 2026-11-25
+repository-code: "https://github.com/ObuchiYuki/quadratic-mc-gap"
+url: "https://github.com/ObuchiYuki/quadratic-mc-gap"
+license:
+  - MIT
+  - CC-BY-4.0
+keywords:
+  - multiplicative complexity
+  - quadratic Boolean forms
+  - XOR-AND circuits
+  - quadratic circuit optimality
+  - Boolean circuit complexity
+  - alternating forms

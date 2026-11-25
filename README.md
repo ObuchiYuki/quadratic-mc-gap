@@ -1,6 +1,12 @@
 # Six AND Gates Beat Seven
 
-**A counterexample to quadratic-circuit optimality over $\mathbb F_2$.**
+**A Counterexample to Quadratic-Circuit Optimality over $\mathbb F_2$.**
+
+[![verify](https://github.com/ObuchiYuki/quadratic-mc-gap/actions/workflows/verify.yml/badge.svg)](https://github.com/ObuchiYuki/quadratic-mc-gap/actions/workflows/verify.yml)
+
+**Author:** Yuki Obuchi  
+**First published:** 2026-11-25  
+**Status:** research note (not peer-reviewed, not formally verified)
 
 Can allowing higher-degree intermediate computations make a quadratic Boolean function cheaper to compute?
 
@@ -105,5 +111,20 @@ To the best of our knowledge, this is a new counterexample to the general questi
 1. Roland Mirwald and Claus-Peter Schnorr. [The Multiplicative Complexity of Quadratic Boolean Forms](https://www.sciencedirect.com/science/article/pii/0304397592902358). *Theoretical Computer Science* 102(2), 307–328, 1992. See §5.
 2. Joan Boyar and Magnus Gausdal Find. [Multiplicative Complexity of Vector Valued Boolean Functions](https://arxiv.org/abs/1407.6169). *Theoretical Computer Science*, 2018. [DOI](https://doi.org/10.1016/j.tcs.2018.02.023). See §4 of the arXiv version.
 3. Gregory Morse. [Unrestricted Boolean Multiplicative Complexity of Four-Term Binary Polynomial Multiplication](https://arxiv.org/abs/2608.30238), 2026. Related work on the optimality question for a specific family.
+
+## How to cite
+
+Use GitHub's "Cite this repository" button, or see [CITATION.cff](CITATION.cff).
+
+> Yuki Obuchi. *Six AND Gates Beat Seven: A Counterexample to Quadratic-Circuit Optimality over F2.* Research note, 2026. https://github.com/ObuchiYuki/quadratic-mc-gap
+
+## Acknowledgments
+
+The example was found, and its proofs and verifier were drafted and checked, with the help of AI assistants (Claude by Anthropic; Gemini by Google for an independent cross-check). The author reviewed the final statements.
+
+## License
+
+- Code ([verify.py](verify.py) and the CI configuration): [MIT License](LICENSE).
+- Text, proofs and the PDF note ([README.md](README.md), [PROOF.md](PROOF.md), `paper/`): [Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE-docs).
 
 **Keywords:** multiplicative complexity, quadratic Boolean forms, vector-valued Boolean functions, XOR–AND circuits, quadratic circuit optimality, level-one multiplicative complexity, nonlinear feedback, Boolean circuit complexity, alternating forms, Mirwald–Schnorr, Boyar–Find.
