@@ -4,7 +4,9 @@
   "publication_type": "preprint",
   "description": "<p>An explicit homogeneous quadratic map Q: F<sub>2</sub><sup>6</sup> &rarr; F<sub>2</sub><sup>5</sup> with multiplicative complexity 6 over XOR&ndash;AND circuits, while every quadratic (level-one) circuit for Q needs 7 AND gates. Both bounds are exact, proved by hand and confirmed by an exhaustive verifier (verify.py). To the best of our knowledge, this gives a negative answer to the general question of quadratic-circuit optimality raised by Mirwald and Schnorr (1992) and revisited by Boyar and Find. Research note; not peer-reviewed.</p>",
   "creators": [
-    {"name": "Obuchi, Yuki"}
+    {
+      "name": "Obuchi, Yuki"
+    }
   ],
   "license": "cc-by-4.0",
   "access_right": "open",
@@ -15,5 +17,44 @@
     "quadratic circuit optimality",
     "Boolean circuit complexity",
     "alternating forms"
-  ]
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.1016/0304-3975(92)90235-8",
+      "relation": "cites",
+      "scheme": "doi",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.1016/j.tcs.2018.02.023",
+      "relation": "cites",
+      "scheme": "doi",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.46586/tosc.v2020.i1.144-184",
+      "relation": "cites",
+      "scheme": "doi",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.48550/arXiv.2608.30238",
+      "relation": "cites",
+      "scheme": "doi",
+      "resource_type": "publication-preprint"
+    },
+    {
+      "identifier": "https://github.com/ObuchiYuki/quadratic-mc-gap",
+      "relation": "isSupplementedBy",
+      "scheme": "url",
+      "resource_type": "software"
+    }
+  ],
+  "references": [
+    "Mirwald, R., Schnorr, C.-P. (1992). The multiplicative complexity of quadratic Boolean forms. Theoretical Computer Science 102(2), 307-328. doi:10.1016/0304-3975(92)90235-8",
+    "Boyar, J., Find, M. G. (2018). Multiplicative complexity of vector valued Boolean functions. Theoretical Computer Science 720, 36-46. doi:10.1016/j.tcs.2018.02.023",
+    "Bilgin, B., De Meyer, L., Duval, S., Levi, I., Standaert, F.-X. (2020). Low AND depth and efficient inverses: a guide on S-boxes for low-latency masking. IACR Transactions on Symmetric Cryptology 2020(1), 144-184. doi:10.46586/tosc.v2020.i1.144-184",
+    "Morse, G. (2026). Unrestricted Boolean multiplicative complexity of four-term binary polynomial multiplication. arXiv:2608.30238. doi:10.48550/arXiv.2608.30238"
+  ],
+  "version": "1.0.1"
 }

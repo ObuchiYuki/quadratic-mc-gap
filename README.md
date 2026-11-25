@@ -7,7 +7,7 @@
 
 **Author:** Yuki Obuchi  
 **First published:** 2026-11-25  
-**DOI:** [10.5281/zenodo.24525440](https://doi.org/10.5281/zenodo.24525440) (all versions; v1.0.0 is [10.5281/zenodo.24525441](https://doi.org/10.5281/zenodo.24525441))  
+**DOI:** [10.5281/zenodo.24525440](https://doi.org/10.5281/zenodo.24525440) (all versions; per-version DOIs are listed on Zenodo)  
 **Status:** research note (not peer-reviewed, not formally verified)
 
 Can allowing higher-degree intermediate computations make a quadratic Boolean function cheaper to compute?
