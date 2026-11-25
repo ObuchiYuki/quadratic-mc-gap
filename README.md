@@ -25,7 +25,7 @@ A circuit need not remain quadratic at every intermediate step just because its 
 | Circuit class | Minimum AND gates |
 | :--- | ---: |
 | Unrestricted XOR–AND | **6** |
-| Quadratic (AND-depth one) | **7** |
+| Quadratic (level-one, AND-depth one) | **7** |
 
 The separation concerns exact multiplicative complexity, not just the cost of two particular implementations.
 
@@ -100,7 +100,7 @@ The verifier checks both circuits on all 64 inputs, enumerates all 651 nonzero d
 
 ## Scope
 
-Here MC counts binary AND gates in unrestricted XOR–AND circuits, with free affine operations. qMC counts binary AND gates in circuits where all AND inputs are affine forms in the original variables (level-one or $\Sigma\Pi\Sigma$ circuits). The same minimum is obtained if all intermediate Boolean functions are required to have degree at most two.
+Here MC counts binary AND gates in unrestricted XOR–AND circuits, with free affine operations. qMC counts binary AND gates in circuits where all AND inputs are affine forms in the original variables (the level-one circuits $L_1$ of Mirwald–Schnorr, equivalently the quadratic circuits of Boyar–Find; AND gates have fan-in two). The same minimum is obtained if all intermediate Boolean functions are required to have degree at most two.
 
 The result is about Boolean functions in the quotient ring $\mathbb F_2[x_1,\ldots,x_6]/(x_i^2-x_i)$, not formal polynomial computation. It does not establish a separation for bilinear maps or an asymptotically growing gap.
 
@@ -108,9 +108,10 @@ To the best of our knowledge, this is a new counterexample to the general questi
 
 ## References
 
-1. Roland Mirwald and Claus-Peter Schnorr. [The Multiplicative Complexity of Quadratic Boolean Forms](https://www.sciencedirect.com/science/article/pii/0304397592902358). *Theoretical Computer Science* 102(2), 307–328, 1992. See §5.
-2. Joan Boyar and Magnus Gausdal Find. [Multiplicative Complexity of Vector Valued Boolean Functions](https://arxiv.org/abs/1407.6169). *Theoretical Computer Science*, 2018. [DOI](https://doi.org/10.1016/j.tcs.2018.02.023). See §4 of the arXiv version.
-3. Gregory Morse. [Unrestricted Boolean Multiplicative Complexity of Four-Term Binary Polynomial Multiplication](https://arxiv.org/abs/2608.30238), 2026. Related work on the optimality question for a specific family.
+1. Roland Mirwald and Claus-Peter Schnorr. [The multiplicative complexity of quadratic Boolean forms](https://www.sciencedirect.com/science/article/pii/0304397592902358). *Theoretical Computer Science* 102(2):307–328, 1992. [doi:10.1016/0304-3975(92)90235-8](https://doi.org/10.1016/0304-3975(92)90235-8). See §5, p. 325 (the question whether $L=L_1$ for all sets of quadratic forms). Conference version in FOCS 1987, pp. 141–149.
+2. Joan Boyar and Magnus Gausdal Find. [Multiplicative complexity of vector valued Boolean functions](https://doi.org/10.1016/j.tcs.2018.02.023). *Theoretical Computer Science* 720:36–46, 2018. [doi:10.1016/j.tcs.2018.02.023](https://doi.org/10.1016/j.tcs.2018.02.023); [arXiv:1407.6169](https://arxiv.org/abs/1407.6169). See §4 (Open Problems) of arXiv v3.
+3. Begül Bilgin, Lauren De Meyer, Sébastien Duval, Itamar Levi and François-Xavier Standaert. [Low AND depth and efficient inverses: a guide on S-boxes for low-latency masking](https://doi.org/10.46586/tosc.v2020.i1.144-184). *IACR Transactions on Symmetric Cryptology* 2020(1):144–184. [doi:10.46586/tosc.v2020.i1.144-184](https://doi.org/10.46586/tosc.v2020.i1.144-184). §2.2 restates the question as open.
+4. Gregory Morse. [Unrestricted Boolean multiplicative complexity of four-term binary polynomial multiplication: rational places, Hasse jets, and the failure of nonlinear feedback](https://arxiv.org/abs/2608.30238). arXiv:2608.30238 [cs.CC], v1, 2026. [doi:10.48550/arXiv.2608.30238](https://doi.org/10.48550/arXiv.2608.30238). Shows that quadratic optimality persists for a specific family and describes the general case as open.
 
 ## How to cite
 
