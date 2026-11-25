@@ -3,9 +3,11 @@
 **A Counterexample to Quadratic-Circuit Optimality over $\mathbb F_2$.**
 
 [![verify](https://github.com/ObuchiYuki/quadratic-mc-gap/actions/workflows/verify.yml/badge.svg)](https://github.com/ObuchiYuki/quadratic-mc-gap/actions/workflows/verify.yml)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24525440.svg)](https://doi.org/10.5281/zenodo.24525440)
 
 **Author:** Yuki Obuchi  
 **First published:** 2026-11-25  
+**DOI:** [10.5281/zenodo.24525440](https://doi.org/10.5281/zenodo.24525440) (all versions; v1.0.0 is [10.5281/zenodo.24525441](https://doi.org/10.5281/zenodo.24525441))  
 **Status:** research note (not peer-reviewed, not formally verified)
 
 Can allowing higher-degree intermediate computations make a quadratic Boolean function cheaper to compute?
@@ -117,7 +119,7 @@ To the best of our knowledge, this is a new counterexample to the general questi
 
 Use GitHub's "Cite this repository" button, or see [CITATION.cff](CITATION.cff).
 
-> Yuki Obuchi. *Six AND Gates Beat Seven: A Counterexample to Quadratic-Circuit Optimality over F2.* Research note, 2026. https://github.com/ObuchiYuki/quadratic-mc-gap
+> Yuki Obuchi. *Six AND Gates Beat Seven: A Counterexample to Quadratic-Circuit Optimality over F2.* Research note, 2026. Zenodo. https://doi.org/10.5281/zenodo.24525440
 
 ## Acknowledgments
 
