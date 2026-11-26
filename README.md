@@ -136,7 +136,7 @@ lake env lean Axioms.lean
 
 Here MC counts binary AND gates in unrestricted XOR–AND circuits, with free affine operations. qMC counts binary AND gates in circuits where all AND inputs are affine forms in the original variables (the level-one circuits $L_1$ of Mirwald–Schnorr, equivalently the quadratic circuits of Boyar–Find; AND gates have fan-in two). The same minimum is obtained if all intermediate Boolean functions are required to have degree at most two.
 
-The result is about Boolean functions in the quotient ring $\mathbb F_2[x_1,\ldots,x_6]/(x_i^2-x_i)$, not formal polynomial computation. It does not establish a separation for bilinear maps or an asymptotically growing gap.
+The result is about Boolean functions in the quotient ring $\mathbb F_2[x_1,\ldots,x_6]/(x_i^2-x_i)$, not formal polynomial computation. This example alone does not establish a separation for bilinear maps or an asymptotically growing gap. A follow-up note, [Bilinear Maps in Fewer AND Gates than Rank](https://github.com/ObuchiYuki/bilinear-mc-gap) ([doi:10.5281/zenodo.24560511](https://doi.org/10.5281/zenodo.24560511)), shows a polynomial gap for almost all bilinear maps (non-explicit).
 
 To the best of our knowledge, this is a new counterexample to the general question in the references below. This is a research note, not a peer-reviewed publication.
 
