@@ -32,6 +32,9 @@ We give an explicit homogeneous quadratic map $Q:\mathbb F_2^6\to\mathbb F_2^5$ 
 \section*{Verification}
 The repository contains \texttt{verify.py}, a standalone verifier using only the Python standard library (Python~3.10+). It checks both circuits on all 64 inputs, enumerates all 651 nonzero decomposable bivectors and all 1{,}023 six-dimensional superspaces of $W$, and independently excludes five-gate unrestricted circuits. It is run automatically on every push.
 
+\section*{Lean formalization}
+All four bounds are proved in Lean~4 with Mathlib in the directory \texttt{lean/} of the repository (theorems \texttt{mc\_le\_six}, \texttt{mc\_ge\_six}, \texttt{qmc\_le\_seven}, \texttt{qmc\_ge\_seven}, combined in \texttt{six\_vs\_seven}). There is no \texttt{sorry}, and the only axioms are \texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}. The statements use the definitions in \texttt{lean/SixVsSeven/Defs.lean}.
+
 \section*{Acknowledgments}
 The example was found, and its proofs and verifier were drafted and checked, with the help of AI assistants (Claude by Anthropic; Gemini by Google for an independent cross-check). The author reviewed the final statements.
 

@@ -2,6 +2,8 @@
 
 Yuki Obuchi, 2026-11-25. Research note accompanying the [README](README.md); not peer-reviewed.
 
+All four bounds are also machine-checked in Lean 4 with Mathlib; see [lean/](lean/) and the README.
+
 ## 1. Statement and circuit model
 
 Let $B_n=\mathbb F_2[x_1,\ldots,x_n]/(x_i^2-x_i:1\le i\le n)$ be the Boolean function ring. Every element has a unique square-free algebraic normal form (ANF). Its degree is the degree of that ANF.

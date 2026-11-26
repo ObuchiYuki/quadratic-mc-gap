@@ -10,7 +10,7 @@ abstract: >-
 authors:
   - given-names: Yuki
     family-names: Obuchi
-version: 1.0.1
+version: 1.0.2
 doi: 10.5281/zenodo.24525440
 identifiers:
   - type: doi

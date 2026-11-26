@@ -3,12 +3,13 @@
 **A Counterexample to Quadratic-Circuit Optimality over $\mathbb F_2$.**
 
 [![verify](https://github.com/ObuchiYuki/quadratic-mc-gap/actions/workflows/verify.yml/badge.svg)](https://github.com/ObuchiYuki/quadratic-mc-gap/actions/workflows/verify.yml)
+[![lean](https://github.com/ObuchiYuki/quadratic-mc-gap/actions/workflows/lean.yml/badge.svg)](https://github.com/ObuchiYuki/quadratic-mc-gap/actions/workflows/lean.yml)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24525440.svg)](https://doi.org/10.5281/zenodo.24525440)
 
 **Author:** Yuki Obuchi  
 **First published:** 2026-11-25  
 **DOI:** [10.5281/zenodo.24525440](https://doi.org/10.5281/zenodo.24525440) (all versions; per-version DOIs are listed on Zenodo)  
-**Status:** research note (not peer-reviewed, not formally verified)
+**Status:** research note (not peer-reviewed). All four bounds are machine-checked in Lean 4 with Mathlib ([lean/](lean/)).
 
 Can allowing higher-degree intermediate computations make a quadratic Boolean function cheaper to compute?
 
@@ -99,6 +100,37 @@ python3 verify.py
 ```
 
 The verifier checks both circuits on all 64 inputs, enumerates all 651 nonzero decomposable bivectors and all 1,023 six-dimensional superspaces, and independently excludes five-gate unrestricted circuits.
+
+## Lean formalization
+
+The directory [lean/](lean/) proves all four bounds in Lean 4 with Mathlib. There is no `sorry`, and every theorem depends only on the standard axioms `propext`, `Classical.choice` and `Quot.sound`. The CI checks this on every push.
+
+| Lean theorem | Statement |
+| :--- | :--- |
+| `mc_le_six` | a circuit with 6 AND gates computes $Q$ |
+| `mc_ge_six` | every circuit computing $Q$ has at least 6 AND gates |
+| `qmc_le_seven` | a quadratic circuit with 7 AND gates computes $Q$ |
+| `qmc_ge_seven` | every quadratic circuit computing $Q$ has at least 7 AND gates |
+| `six_vs_seven` | the four statements together |
+
+The statements use the definitions in [lean/SixVsSeven/Defs.lean](lean/SixVsSeven/Defs.lean). A circuit has fan-in-two AND gates, and each AND input and output is an affine (XOR) combination of the inputs and earlier gates; constants are allowed. A quadratic circuit is one whose AND inputs use no AND gate. A reader who wants to trust the formal result should check that these definitions match the intended notions.
+
+The proofs work as follows.
+
+- **`mc_ge_six`** follows §5.
+- **`qmc_ge_seven`** uses linear algebra and a finite certificate:
+  - The images of the gate bivectors in $\Lambda^2/W$ span at most one dimension.
+  - For each possible direction $\sigma$, a stored linear functional vanishes on every decomposable bivector in $W+\langle\sigma\rangle$ but not on $W$. This is checked for all $64\times64$ pairs of linear forms by the Lean kernel (`decide`).
+- **The upper bounds** are checked on all 64 inputs.
+
+Build (Lean toolchain from `lean-toolchain`, Mathlib pinned in `lakefile.toml`):
+
+```sh
+cd lean
+lake exe cache get
+lake build
+lake env lean Axioms.lean
+```
 
 ## Scope
 

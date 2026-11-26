@@ -56,5 +56,5 @@
     "Bilgin, B., De Meyer, L., Duval, S., Levi, I., Standaert, F.-X. (2020). Low AND depth and efficient inverses: a guide on S-boxes for low-latency masking. IACR Transactions on Symmetric Cryptology 2020(1), 144-184. doi:10.46586/tosc.v2020.i1.144-184",
     "Morse, G. (2026). Unrestricted Boolean multiplicative complexity of four-term binary polynomial multiplication. arXiv:2608.30238. doi:10.48550/arXiv.2608.30238"
   ],
-  "version": "1.0.1"
+  "version": "1.0.2"
 }
